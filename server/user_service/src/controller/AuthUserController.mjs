@@ -112,6 +112,32 @@ class AuthUserController {
         message: `Internal server error`
       })
     }
+  };
+  editUser = (req, res) => {
+    try {
+      const { userId } = req.params;
+      console.log(typeof userId);
+      console.log(typeof req.user.id);
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({
+        message: `Internal server error`
+      })
+    }
+  }
+  logout = (req, res) => {
+    try {
+      res.clearCookie('auth_token')
+      return res.status(200).json({
+        message: `Loggedout successfully`,
+        authorization: false
+      }) 
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({
+        message: `Internal server error`
+      })
+    }
   }
 }
 

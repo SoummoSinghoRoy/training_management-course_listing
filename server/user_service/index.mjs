@@ -16,5 +16,5 @@ app.listen(PORT, () => {
 import executedMiddleware from './src/middleware/middleware.mjs';
 executedMiddleware(app);
 
-import authRouteHandler from './src/routes/auth_user_routes.mjs';
+import authRouteHandler from './src/routes/authUserRoutes.mjs';
 app.use('/api/user', authRouteHandler);
