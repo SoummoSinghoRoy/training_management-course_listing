@@ -1,6 +1,6 @@
 import mysql from 'mysql';
 
-import env_variable from '../env_config/custom_env_config.mjs';
+import env_variable from './custom_env_config.mjs';
 
 const db_connection = mysql.createPool({
   host: env_variable.db_host,

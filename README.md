@@ -12,4 +12,4 @@
 
 ## *Details coming soon......*
 
- - Follow linkedin: [Swadip Singho Roy](https://www.linkedin.com/in/soummo-roy/)
+ - Follow on linkedin: [Swadip Singho Roy](https://www.linkedin.com/in/soummo-roy/)

@@ -19,6 +19,29 @@
   - Awarness:
   1. If we want to use central configuration/shareable configuration for all services like: environment variable, db config etc we must use 'path' library who provide access shareable file inside service.
   2. We should re-configured centrally shared/configured asset when will give the client specific service. e.g: db config, env config will be configured for service providing time. Otherwise every service will hold specific configuration.  
+
+# Folder Structure of microservices software/application project:
+  * microservices-project-name
+    - gateway 
+      |---------- central routes
+      |---------- central middleware
+      |---------- central application initialization file e.g app.js/index.js, 
+      |---------- package.json, env or etc depends on demand
+    - shared
+      |---------- shared/common configuration e.g db configuration, env configuration,
+      |---------- shared/common middleware
+      |---------- shared/common necessary file/folder.
+    - service-folder(every service is individual)
+      |---------- src
+      |           |------ associated routes
+      |           |------ associated controller
+      |           |------ associaed request validation
+      |           |---------- associated middleware
+      |---------- associated application initialization file e.g app.js/index.js, 
+      |---------- associated package.json, env or etc depends on demand
+    - all crednetils folder/file
+
+> We can go hybrid approach monolithic + microservices
   
 * SQL note:
   1. SQL injection: if we write sql query directly hacker can inject harm context. So way of preventing injection is query parameterized approach. Where we will write query but value assign part will be parameterized by (?) question mark then pass it's value(dynamically or statically) as a parameter this parameter will be an array.  When invoke query method/function pass this parameter as a 2nd parameter of this method/function. Pass values as a template string it's not good practice.

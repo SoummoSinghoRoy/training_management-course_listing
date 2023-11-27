@@ -1,7 +1,7 @@
 import express from 'express';
 
-import db_connection from '../shared/db/db_config.mjs';
-const PORT = 4001;
+import db_connection from './config/db_config.mjs';
+const PORT = 4000;
 const app = express();
 
 app.listen(PORT, () => {
@@ -13,8 +13,8 @@ app.listen(PORT, () => {
   })
 })
 
-import executedMiddleware from './src/middleware/middleware.mjs';
+import executedMiddleware from './middlewares/middleware.mjs';
 executedMiddleware(app);
 
-import authRouteHandler from './src/routes/authUserRoutes.mjs';
-app.use('/api/user', authRouteHandler);
+import executedRoute from './api/routes/routes.mjs';
+executedRoute(app)
