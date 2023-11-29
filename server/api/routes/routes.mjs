@@ -1,6 +1,11 @@
-import authRoute from './authRoutes.mjs';
+import authRoute from './authRoute.mjs';
+import studentRoute from './studentRoute.mjs';
 
 const routes = [
+  {
+    path: '/api/student',
+    handler: studentRoute
+  },
   {
     path: '/api/auth',
     handler: authRoute

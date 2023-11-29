@@ -1,8 +1,8 @@
 import express from 'express';
 
-import signupValidation from '../validation/signup_validation.mjs';
-import loginValidation from '../validation/login_validation.mjs';
-import editValidation from '../validation/edit_validation.mjs'
+import signupValidation from '../validation/auth/signup_validation.mjs';
+import loginValidation from '../validation/auth/login_validation.mjs';
+import editValidation from '../validation/auth/edit_validation.mjs';
 import AuthUserController from '../controllers/AuthUserController.mjs';
 import Authentication from '../../middlewares/Authentication.mjs';
 
